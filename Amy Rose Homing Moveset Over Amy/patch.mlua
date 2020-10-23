@@ -1,0 +1,15 @@
+--[Patch]--
+Title("Amy Rose Homing Moveset Over Amy")
+Author("OtterWithAController")
+Platform("Xbox 360")
+
+--[Functions]--
+DecryptExecutable()
+
+--Disable Spindash
+WriteByte(Executable|0xB18EEB|0x29)
+WriteBytes(Executable|0xB18EEE|"15D0")
+
+--Disable Antigravity
+WriteByte(Executable|0xB18EDB|0x29)
+WriteBytes(Executable|0xB18EDE|"15D0")
